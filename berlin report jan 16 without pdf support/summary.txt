@@ -1,0 +1,26 @@
+COMPLIANCE ANALYSIS SUMMARY
+=
+
+Total Requirements: 231
+Total Gaps: 174 (75.3%)
+
+Support Breakdown:
+- Fully Supported: 57 (24.7%)
+- Partially Supported: 112 (48.5%)
+- Not Supported: 61 (26.4%)
+- Unknown: 1 (0.4%)
+
+Dependency Analysis:
+- Total Dependencies: 0
+- Is DAG: Yes
+- Max Dependency Depth: 0
+- Root Requirements: 231
+- Leaf Requirements: 231
+
+Gap Severity:
+- Critical Priority (8-10): 0
+- Blocking Gaps: 0
+- Require HIL Review: 0
+
+Recommendation:
+Review and plan remediation for identified gaps.

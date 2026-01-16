@@ -1,0 +1,4000 @@
+{
+  "atomic_requirements": [
+    {
+      "id": "ATOM_001",
+      "content": "TLS connections must use TLS version 1.2 or higher for communication between TPP and ASPSP",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TLS connection establishment only succeeds with TLS 1.2 or higher versions",
+      "metadata": {
+        "source": "Transport Layer section 3",
+        "context": "TLS security requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_002",
+      "content": "TPP must use a qualified certificate for website authentication issued by a qualified trust service provider according to eIDAS regulation",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP certificate is qualified for website authentication and issued by eIDAS-compliant qualified trust service provider",
+      "metadata": {
+        "source": "Transport Layer section 3",
+        "context": "Certificate requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_003",
+      "content": "TPP certificate must be compliant with EBA-RTS requirements and indicate all roles the TPP is authorised to use",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify certificate content complies with EBA-RTS and contains all authorized TPP roles",
+      "metadata": {
+        "source": "Transport Layer section 3",
+        "context": "Certificate content requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_004",
+      "content": "TLS connection must always include client (TPP) authentication",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TLS connection establishment requires and validates client certificate from TPP",
+      "metadata": {
+        "source": "Transport Layer section 3",
+        "context": "Client authentication",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_005",
+      "content": "ASPSP may require TPP to sign request messages at application layer",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify ASPSP can optionally enforce application layer message signing and reject unsigned messages when required",
+      "metadata": {
+        "source": "Section 4.2",
+        "context": "Application layer signing",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_006",
+      "content": "Electronic signature of TPP must be based on a qualified certificate for electronic seals issued by eIDAS-compliant qualified trust service provider",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP signing certificate is qualified for electronic seals and issued by eIDAS-compliant provider",
+      "metadata": {
+        "source": "Section 4.2",
+        "context": "Electronic seal certificate",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_007",
+      "content": "ASPSP may implement OAuth2 for PSU authentication or authorization in payment initiation and account information services",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify ASPSP can optionally support OAuth2 authentication flows for PSU authentication and authorization",
+      "metadata": {
+        "source": "Section 4.3",
+        "context": "OAuth2 support",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_008",
+      "content": "XS2A API must support OAuth2 Authorization Code Grant flow for payment authorization using scope attribute to refer to payment data",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify OAuth2 Authorization Code Grant flow works with scope parameter referencing payment data for authorization",
+      "metadata": {
+        "source": "Section 4.3",
+        "context": "OAuth2 PIS integration",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_009",
+      "content": "Character set must be UTF-8 encoded for all API communications",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify all API requests and responses use UTF-8 character encoding",
+      "metadata": {
+        "source": "Section 2.1",
+        "context": "Character set requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_010",
+      "content": "ASPSPs must accept at least the specified basic character set including letters, numbers, and common punctuation",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "eef9ab97432c - 4.2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP accepts all characters in the specified basic character set: a-z, A-Z, 0-9, /-?:().,'+, and space",
+      "metadata": {
+        "source": "Section 2.1",
+        "context": "Minimum character set support",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_011",
+      "content": "When the underlying account is a multicurrency account, the first reference SHALL refer to the collection of all sub-accounts addressable by the IBAN, and the second reference SHALL refer to the euro sub-account only.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that for multicurrency accounts: (1) First IBAN reference returns all sub-accounts, (2) Second reference returns only euro sub-account data",
+      "metadata": {
+        "context": "Multicurrency account handling in XS2A Framework",
+        "applicable_markets": "Belgium and other European markets using multicurrency products",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_012",
+      "content": "The interface specification SHALL act on sub-accounts of multicurrency accounts in exactly the same way as on regular accounts for payment initiation and account information services.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that all API operations (payment initiation and account information) work identically on multicurrency sub-accounts as on regular accounts",
+      "metadata": {
+        "context": "Consistent treatment of multicurrency sub-accounts",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_013",
+      "content": "The NextGenPSD2 API SHALL support dedicated authorisation endpoints for payment initiation transactions and establish consent transactions to handle transaction authorisation by PSUs.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that dedicated authorisation endpoints exist and function for both payment initiation and consent establishment flows",
+      "metadata": {
+        "version_introduced": "1.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_014",
+      "content": "The API SHALL support multiple level SCA where a transaction needs authorisation by more than one PSU in a corporate context.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that transactions can require and process authorisation from multiple PSUs, with each creating separate authorisation sub-resources",
+      "metadata": {
+        "context": "Corporate multi-level authentication",
+        "version_introduced": "1.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_015",
+      "content": "The API SHALL support signing of a group of transactions with one SCA as offered by ASPSPs in online banking.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that multiple transactions can be grouped and authorised with a single SCA process using signing-baskets endpoint",
+      "metadata": {
+        "version_introduced": "1.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_016",
+      "content": "The API SHALL support signing of a group of transactions with multi-level SCA where the group needs authorisation by more than one PSU in a corporate context.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that transaction groups can be created and require multiple PSU authorisations, with each PSU creating separate authorisation sub-resources for the basket",
+      "metadata": {
+        "context": "Corporate multi-level group authentication",
+        "version_introduced": "1.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_017",
+      "content": "Payment resources that need to be signed n times SHALL end up with n SCA sub-resources in a normal successful process.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that the number of SCA sub-resources created equals the number of required signatures for any payment resource",
+      "metadata": {
+        "context": "Resource structure for multi-level SCA",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_018",
+      "content": "ASPSPs MAY offer the signing-baskets endpoint to support grouping several transactions for one common authorisation process.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MAY",
+      "test_criteria": "If offered, verify that signing-baskets endpoint allows grouping of payment and consent resources for common authorisation",
+      "metadata": {
+        "context": "Optional signing basket functionality",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_019",
+      "content": "When offering the signing basket function, ASPSPs MAY restrict the grouping to specific types such as payments only, individual payments, or the same payment product.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MAY",
+      "test_criteria": "If ASPSP restricts grouping, verify that restrictions are documented and enforced according to ASPSP documentation",
+      "metadata": {
+        "context": "Signing basket grouping restrictions",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_020",
+      "content": "The signing basket SHALL get the status of being fully authorised as soon as all grouped transactions have been successfully authorised by the applied SCA mechanism.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that signing basket status changes to fully authorised only when all contained transactions are successfully authorised",
+      "metadata": {
+        "context": "Signing basket completion logic",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_021",
+      "content": "ASPSPs SHALL enable direct start of Redirect SCA processing after payment or consent submission if no other data from the TPP has to be submitted.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that for simple cases, ASPSP automatically creates authorisation sub-resources and returns hyperlinks without requiring separate POST to authorisations endpoint",
+      "metadata": {
+        "context": "Optimised single payment submission process",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_022",
+      "content": "The specification SHALL support cancellation of payment initiations by PISPs starting from version 1.2.",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment cancellation endpoints and processes are available and functional for PISPs",
+      "metadata": {
+        "version_introduced": "1.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_023",
+      "content": "Payment cancellation SHALL be divided into two steps: DELETE the corresponding resource, and start an authorisation process for the cancellation by the PSU where needed.",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that cancellation process requires: (1) DELETE request on payment resource, (2) POST to cancellation-authorisations endpoint when authorisation needed",
+      "metadata": {
+        "context": "Two-step cancellation process",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_024",
+      "content": "The second step of cancellation authorisation MAY be omitted where a dedicated authorisation of the cancellation is not foreseen by the ASPSP.",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that cancellation can complete with DELETE only when ASPSP does not require explicit cancellation authorisation",
+      "metadata": {
+        "context": "Optional cancellation authorisation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_025",
+      "content": "It is strongly RECOMMENDED to send PSU context data elements in all request messages within payment initiation or consent initiation transaction flows with PSU authentication involved.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "RECOMMENDED",
+      "test_criteria": "Verify that PSU context headers (PSU-IP-Address, PSU-User-Agent, etc.) are included in payment and consent initiation requests",
+      "metadata": {
+        "context": "PSU context data for risk management",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_026",
+      "content": "TPPs SHALL be identified by PSD2 related eIDAS certificates as mandated by PSD2.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that TPP identification uses valid QWAC and/or QSEAL certificates compliant with ETSI PSD2 standards",
+      "metadata": {
+        "context": "PSD2 eIDAS certificate requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_027",
+      "content": "TPP brand names MAY be entered into the certificate field Organisation Unit (OU) and ASPSPs MAY ignore entries in this field.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that TPP brand names in OU field are processed correctly when present, and system functions properly when ASPSPs ignore this field",
+      "metadata": {
+        "context": "TPP brand name handling in certificates",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_028",
+      "content": "URIs provided by TPPs in TPP-Redirect-URI or TPP-Nok-Redirect-URI SHOULD comply with the domain secured by the eIDAS QWAC certificate of the TPP in the field CN or SubjectAltName.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify that redirect URIs match or are subdomains of the domains listed in the TPP's QWAC certificate CN or SubjectAltName fields",
+      "metadata": {
+        "context": "TPP URI security requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_029",
+      "content": "TPPs SHALL keep the TPP-Redirect-URI used within all authorisation processes for a specific transaction constant during the lifecycle of that transaction.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that the same TPP-Redirect-URI is used throughout the entire authorisation lifecycle of a single transaction",
+      "metadata": {
+        "context": "URI consistency during transaction lifecycle",
+        "migration_requirement": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_030",
+      "content": "All methods submitted by a TPP that address dynamically created resources in this API MAY only apply to resources which have been created by the same TPP before.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that TPPs can only access and modify resources they created, with proper access control enforcement",
+      "metadata": {
+        "context": "TPP resource access control",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_031",
+      "content": "The card-accounts endpoint MUST deliver credit card account related account information where the account is used to reconcile credit card transactions with the PSU",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that GET /card-accounts returns credit card account information that can be used for transaction reconciliation",
+      "metadata": {
+        "endpoint": "card-accounts",
+        "method": "GET",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_032",
+      "content": "The GET card-accounts/{account-id}/transactions endpoint SHALL be mandatory for reading transaction lists related to a given card account",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that GET /card-accounts/{account-id}/transactions endpoint is implemented and returns transaction lists for valid card account IDs",
+      "metadata": {
+        "endpoint": "card-accounts/{account-id}/transactions",
+        "method": "GET",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_033",
+      "content": "ASPSPs MAY tokenise card-account-id parameters such that actual card account or card numbers like IBANs or PANs are not part of the path definitions for data protection reasons",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that card account IDs in API paths can be tokenised and do not expose actual card numbers, IBANs, or PANs",
+      "metadata": {
+        "data_protection": true,
+        "tokenisation": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_034",
+      "content": "The POST consents endpoint SHALL be mandatory for creating consent resources that define access rights to dedicated accounts of a given PSU-ID",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that POST /consents endpoint is implemented and creates consent resources with defined account access rights for PSU-ID",
+      "metadata": {
+        "endpoint": "consents",
+        "method": "POST",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_035",
+      "content": "The GET consents/{consentId} endpoint SHALL be mandatory for reading the exact definition of a given consent resource including validity status",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that GET /consents/{consentId} returns complete consent definition and validity status for valid consent IDs",
+      "metadata": {
+        "endpoint": "consents/{consentId}",
+        "method": "GET",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_036",
+      "content": "The DELETE consents/{consentId} endpoint SHALL be mandatory for terminating the addressed consent",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that DELETE /consents/{consentId} successfully terminates the specified consent",
+      "metadata": {
+        "endpoint": "consents/{consentId}",
+        "method": "DELETE",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_037",
+      "content": "The POST funds-confirmations endpoint SHALL be mandatory for checking whether a specific amount is available at point of time of the request on an account",
+      "canonical_ob_capability": "Funds Confirmation",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that POST /funds-confirmations returns availability status for requested amount on specified account at time of request",
+      "metadata": {
+        "endpoint": "funds-confirmations",
+        "method": "POST",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_038",
+      "content": "HTTP response code 200 OK MUST be returned for successful GET and PUT requests",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that successful GET and PUT operations return HTTP 200 status code",
+      "metadata": {
+        "http_status": "200",
+        "methods": [
+          "GET",
+          "PUT"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_039",
+      "content": "HTTP response code 201 Created MUST be returned for successful POST requests where Payment Initiation or Consent Request was correctly performed",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that successful POST operations for payment initiation or consent creation return HTTP 201 status code",
+      "metadata": {
+        "http_status": "201",
+        "methods": [
+          "POST"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_040",
+      "content": "HTTP response code 400 Bad Request MUST be returned when validation errors occur due to malformed syntax in request or incorrect data in payload",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that requests with malformed syntax or incorrect payload data return HTTP 400 status code",
+      "metadata": {
+        "http_status": "400",
+        "error_type": "validation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_041",
+      "content": "HTTP response code 401 Unauthorized MUST be returned when the TPP or PSU is not correctly authorized to perform the request",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that requests with incorrect authorization return HTTP 401 status code",
+      "metadata": {
+        "http_status": "401",
+        "error_type": "authorization",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_042",
+      "content": "HTTP response code 404 Not Found MUST be returned when the resource or endpoint referenced in the path does not exist or cannot be referenced by the TPP or PSU",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that requests for non-existent or inaccessible resources return HTTP 404 status code",
+      "metadata": {
+        "http_status": "404",
+        "error_type": "not_found",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_043",
+      "content": "Additional error information with messageCode field SHALL be mandatory when using NextGenPSD2 specific error solution",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that error responses using NextGenPSD2 format include mandatory messageCode field in tppMessageInformation",
+      "metadata": {
+        "error_format": "NextGenPSD2",
+        "required_field": "messageCode",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_044",
+      "content": "The Content-Type header MUST be set to application/json when using NextGenPSD2 specific error information",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that error responses using NextGenPSD2 format include Content-Type: application/json header",
+      "metadata": {
+        "error_format": "NextGenPSD2",
+        "header": "Content-Type",
+        "value": "application/json",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_045",
+      "content": "The Content-Type header MUST be set to application/problem+json when using standardised RFC7807 error information",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "b3c635de3d1c",
+      "requirement_strength": "MANDATORY",
+      "test_criteria": "Verify that error responses using RFC7807 format include Content-Type: application/problem+json header",
+      "metadata": {
+        "error_format": "RFC7807",
+        "header": "Content-Type",
+        "value": "application/problem+json",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_046",
+      "content": "When an OAuth2 token is invalid, the system shall return an HTTP 401 Unauthorized response with Content-Type application/problem+json",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Send request with invalid OAuth2 token and verify response returns HTTP 401 status code with Content-Type header set to application/problem+json",
+      "metadata": {
+        "error_type": "TOKEN_INVALID",
+        "response_format": "RFC 7807 Problem Details",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_047",
+      "content": "Error responses shall include a type field with URI reference to the specific error code documentation",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify error response JSON contains 'type' field with valid URI format pointing to error code documentation",
+      "metadata": {
+        "example_type_uri": "https://berlingroup.com/error-codes/TOKEN_INVALID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_048",
+      "content": "Error responses shall include a human-readable title describing the error condition",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify error response JSON contains 'title' field with descriptive text explaining the error",
+      "metadata": {
+        "field_name": "title",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_049",
+      "content": "Error responses may include additional error details limited to 500 characters",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "MAY",
+      "test_criteria": "When detail field is present in error response, verify character count does not exceed 500 characters",
+      "metadata": {
+        "max_length": 500,
+        "field_name": "detail",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_050",
+      "content": "Error responses shall include a machine-readable error code",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify error response JSON contains 'code' field with standardized error code value",
+      "metadata": {
+        "field_name": "code",
+        "example_code": "TOKEN_INVALID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_051",
+      "content": "Error responses may include an additionalErrors array for multiple related errors",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "MAY",
+      "test_criteria": "When multiple errors occur, verify response contains 'additionalErrors' array with each error having title, detail, and code fields",
+      "metadata": {
+        "field_name": "additionalErrors",
+        "structure": "array_of_objects",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_052",
+      "content": "ASPSPs shall deliver transaction status within all response messages after a payment initiation resource has been established when no error occurs",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "After successful payment initiation, verify all subsequent response messages contain transactionStatus field",
+      "metadata": {
+        "field_name": "transactionStatus",
+        "standard": "ISO20022",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_053",
+      "content": "Payment transaction status shall change during the initiation process based on sub-step results including format checks, SCA checks, PSU profile checks, and funds availability checks",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Monitor transaction status changes throughout payment process and verify status updates reflect completion of each validation step",
+      "metadata": {
+        "validation_steps": [
+          "format_checks",
+          "SCA_checks",
+          "PSU_profile_checks",
+          "funds_availability_checks"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_054",
+      "content": "Final payment transaction status shall be either RJCT (Rejected) or ACSC (AcceptedSettlementCompleted) at the end of the payment process",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "d029f87e3d80",
+      "requirement_strength": "SHALL",
+      "test_criteria": "At payment completion, verify final transaction status is either 'RJCT' for rejected payments or 'ACSC' for successfully completed payments",
+      "metadata": {
+        "final_statuses": [
+          "RJCT",
+          "ACSC"
+        ],
+        "standard": "ISO20022",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_055",
+      "content": "The system shall support transaction status ACTC (AcceptedTechnicalCorrect) to indicate successful PSU authentication and syntactical/semantical product checks for batch booking processes",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation returns status ACTC when PSU authentication, syntax and semantic checks are successful in batch booking scenario",
+      "metadata": {
+        "status_code": "ACTC",
+        "payment_type": "batch_booking",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_056",
+      "content": "The system shall support transaction status ACWC (AcceptedWithChanges) to indicate successful checks with ASPSP-applied changes to payment initiation such as requested execution date modifications",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation returns status ACWC when ASPSP modifies payment parameters and notifies PISP of changes",
+      "metadata": {
+        "status_code": "ACWC",
+        "change_notification": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_057",
+      "content": "The system shall support transaction status ACCP (AcceptedCustomerProfile) to indicate positive financial risk profile and PSU funds availability checks",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation returns status ACCP when customer profile and funds availability checks are successful",
+      "metadata": {
+        "status_code": "ACCP",
+        "funds_check": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_058",
+      "content": "The system shall support transaction status ACFC (AcceptedFundsChecked) to indicate positive customer profile and funds availability verification",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation returns status ACFC when both customer profile and funds availability are positively verified",
+      "metadata": {
+        "status_code": "ACFC",
+        "comprehensive_check": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_059",
+      "content": "The system shall support transaction status ACSP (AcceptedSettlementInProcess) for realtime booking processes when settlement routine for debtor account has been initiated",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation returns status ACSP when debtor account settlement routine is initiated in realtime booking",
+      "metadata": {
+        "status_code": "ACSP",
+        "booking_type": "realtime",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_060",
+      "content": "The system shall support transaction status ACSC (AcceptedSettlementCompleted) to indicate money has been booked from the debtor account",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation returns status ACSC when funds are successfully debited from payer account",
+      "metadata": {
+        "status_code": "ACSC",
+        "debtor_settlement": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_061",
+      "content": "The system shall support transaction status ACCC (AcceptedSettlementCompleted) for instant payments to indicate creditor account settlement completion",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that instant payment returns status ACCC when creditor account settlement is completed",
+      "metadata": {
+        "status_code": "ACCC",
+        "payment_type": "instant",
+        "creditor_settlement": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_062",
+      "content": "The system shall support transaction status PART (PartiallyAccepted) for bulk payments when not all payments are processed successfully despite completed authorizations",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that bulk payment initiation returns status PART when some payments in the bulk are rejected while others are accepted",
+      "metadata": {
+        "status_code": "PART",
+        "payment_type": "bulk",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_063",
+      "content": "The system shall provide optional fundsAvailable boolean data element with transaction status codes ACTC, ACWC, and ACCP to indicate funds check results",
+      "canonical_ob_capability": "Funds Confirmation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that GET Status Response includes fundsAvailable field with true/false value when used with specified status codes",
+      "metadata": {
+        "data_element": "fundsAvailable",
+        "applicable_status": [
+          "ACTC",
+          "ACWC",
+          "ACCP"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_064",
+      "content": "The system shall support transaction status PDNG (Pending) to inform TPP that the next payment status has not been reached yet",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment status request returns PDNG when payment processing is still in progress",
+      "metadata": {
+        "status_code": "PDNG",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_065",
+      "content": "The system shall provide SCA process status information through scaStatus data element in GET SCA Status Response Message for payment initiation",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that GET SCA Status Response includes scaStatus field indicating current strong customer authentication state",
+      "metadata": {
+        "data_element": "scaStatus",
+        "response_type": "GET SCA Status Response",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_066",
+      "content": "The system shall set transaction status to CANC (Cancelled) after successful payment cancellation and maintain this status while the resource remains addressable",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that cancelled payment maintains CANC status in all subsequent status requests until resource is no longer accessible",
+      "metadata": {
+        "status_code": "CANC",
+        "operation": "cancellation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_067",
+      "content": "The system shall set transaction status to PATC (PartiallyAcceptedTechnicalCorrect) for payments authorized by at least one PSU but not yet fully authorized in multilevel SCA processes",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment returns status PATC when partially authorized in multilevel SCA scenario",
+      "metadata": {
+        "status_code": "PATC",
+        "sca_type": "multilevel",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_068",
+      "content": "The system shall support consent status values 'received', 'rejected', and 'valid' during the AIS consent initiation phase",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that AIS consent status is reported as received, rejected, or valid during consent establishment process",
+      "metadata": {
+        "consent_statuses": [
+          "received",
+          "rejected",
+          "valid"
+        ],
+        "phase": "initiation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_069",
+      "content": "The system shall support consent status 'expired' when consent has exceeded its validity period such as after 90 days",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that consent status changes to 'expired' when validity period is exceeded",
+      "metadata": {
+        "consent_status": "expired",
+        "trigger": "time_expiry",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_070",
+      "content": "The system shall support consent status 'revokedByPsu' when consent has been revoked by the Payment Service User",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that consent status changes to 'revokedByPsu' when PSU revokes the consent",
+      "metadata": {
+        "consent_status": "revokedByPsu",
+        "trigger": "psu_action",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_071",
+      "content": "The system shall support consent status 'terminatedByTpp' when AIS has terminated the consent",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that consent status changes to 'terminatedByTpp' when Third Party Provider terminates the consent",
+      "metadata": {
+        "consent_status": "terminatedByTpp",
+        "trigger": "tpp_action",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_072",
+      "content": "The system shall provide hyperlinks with semantic tags in the _links data element to guide TPP through API processes for payment initiation and account information services",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that API responses include _links element with tagged hyperlinks indicating available next actions",
+      "metadata": {
+        "data_element": "_links",
+        "link_format": "HAL",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_073",
+      "content": "The system shall support both relative links starting with /v1/ and global links with full URLs in hyperlink steering",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that system accepts and processes both relative and absolute URL formats in API links",
+      "metadata": {
+        "link_types": [
+          "relative",
+          "absolute"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_074",
+      "content": "The system should use relative links in hyperlink steering to save space",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify that API responses predominantly use relative links rather than full URLs when possible",
+      "metadata": {
+        "preference": "relative_links",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_075",
+      "content": "The system may include additional hyperlinks beyond those specified in related API calls and shall document these in ASPSP PSD2 documentation",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that additional hyperlinks are properly documented and can be safely ignored by TPPs",
+      "metadata": {
+        "extensibility": "additional_links",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_076",
+      "content": "The system may add additional data attributes to response messages and shall document these extensions in ASPSP XS2A interface documentation",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that data extensions are documented and do not break TPP implementations when ignored",
+      "metadata": {
+        "extensibility": "data_attributes",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_077",
+      "content": "The system shall validate eIDAS certificates in payment initiation requests",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment initiation requests include eIDAS certificate validation",
+      "metadata": {
+        "certificate_type": "eIDAS",
+        "validation_point": "payment_initiation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_078",
+      "content": "The system shall validate request syntax and semantics in payment initiation processing",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "da818bb5b9ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment requests undergo both syntactic and semantic validation before processing",
+      "metadata": {
+        "validation_types": [
+          "syntax",
+          "semantics"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_079",
+      "content": "ASPSPs MAY start the authorisation process implicitly when no additional data is needed from the TPP",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "648825991d1c",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that ASPSP can initiate authorisation process without requiring additional TPP data input when conditions allow",
+      "metadata": {
+        "extraction_method": "direct_text_analysis",
+        "context": "Redirect SCA Approach optimization",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_080",
+      "content": "The ASPSP SHALL redirect the PSU browser session directly after the Payment Initiation Response when using implicit authorisation start",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "648825991d1c",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that PSU browser redirection occurs immediately following Payment Initiation Response without intermediate steps",
+      "metadata": {
+        "extraction_method": "flow_analysis",
+        "context": "Implicit authorisation process flow",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_081",
+      "content": "The TPP MAY send an SCA status request to follow the SCA process during implicit authorisation",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "648825991d1c",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that TPP can successfully send and receive responses to SCA status requests during the authorisation process",
+      "metadata": {
+        "extraction_method": "direct_text_analysis",
+        "context": "SCA process monitoring capability",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_082",
+      "content": "The ASPSP SHALL validate eIDAS certificate request syntax, TPP role, and semantics during payment initiation",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "648825991d1c",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that ASPSP performs comprehensive eIDAS certificate validation including syntax correctness, TPP role verification, and semantic validation",
+      "metadata": {
+        "extraction_method": "diagram_analysis",
+        "context": "Certificate validation requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_083",
+      "content": "The ASPSP SHALL return HTTP status code 200 (OK) with ISO20022 status in the Payment-Status Response",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "648825991d1c",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that Payment-Status Response contains HTTP 200 status code and includes valid ISO20022 status information",
+      "metadata": {
+        "extraction_method": "diagram_analysis",
+        "context": "Payment status response format",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_084",
+      "content": "TPP must validate eIDAS certificate, request syntax, TPP role, and semantics when receiving payment status response",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP performs eIDAS certificate validation, request syntax validation, TPP role verification, and semantic validation upon payment status response receipt",
+      "metadata": {
+        "flow_type": "redirect_sca",
+        "response_code": "200",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_085",
+      "content": "TPP must control session fixation using the state parameter during redirect SCA approach",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP implements session fixation protection by validating state parameter matches original request during redirect flow",
+      "metadata": {
+        "flow_type": "redirect_sca",
+        "parameter": "state",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_086",
+      "content": "ASPSP must provide confirmation code as query parameter when requesting transaction authorization confirmation",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP includes confirmationCode as query parameter in transaction authorization confirmation request",
+      "metadata": {
+        "flow_type": "redirect_sca",
+        "parameter": "confirmationCode",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_087",
+      "content": "TPP must validate confirmationCode semantics in transaction authorization confirmation response",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP validates confirmationCode parameter semantics and structure in authorization confirmation response",
+      "metadata": {
+        "flow_type": "redirect_sca",
+        "validation_type": "confirmationCode_semantics",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_088",
+      "content": "ASPSP must validate Client ID, Redirect URI, and TPP Role when using OAuth2 SCA approach",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP validates Client ID, Redirect URI, and TPP Role parameters during OAuth2 SCA flow",
+      "metadata": {
+        "flow_type": "oauth2_sca",
+        "validation_parameters": [
+          "Client ID",
+          "Redirect URI",
+          "TPP Role"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_089",
+      "content": "TPP must use access token for payment status request in OAuth2 SCA approach",
+      "canonical_ob_capability": "Token Lifecycle Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP includes valid access token in payment status request when using OAuth2 SCA approach",
+      "metadata": {
+        "flow_type": "oauth2_sca",
+        "token_usage": "payment_status_request",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_090",
+      "content": "ASPSP should inform TPP to notify PSU about decoupled authentication requirement via PSU Message",
+      "canonical_ob_capability": "Event Notification",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify ASPSP sends PSU Message to TPP instructing notification to PSU about decoupled authentication requirement",
+      "metadata": {
+        "flow_type": "decoupled_sca",
+        "message_type": "PSU Message",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_091",
+      "content": "TPP should follow OAuth Security Best Practice definitions as defined in OA-SecTop reference",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "RECOMMENDED",
+      "test_criteria": "Verify TPP implementation follows security best practices outlined in OA-SecTop reference document",
+      "metadata": {
+        "reference": "OA-SecTop",
+        "flow_type": "oauth2_sca",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_092",
+      "content": "Payment status response must return HTTP status code 200 with ISO20022 status format",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify payment status response returns HTTP 200 status code and includes ISO20022 compliant status information",
+      "metadata": {
+        "http_status": 200,
+        "response_format": "ISO20022",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_093",
+      "content": "PSU must authenticate with first factor before account or SCA method details are available to PISP in embedded SCA approach",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "508687390798",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify PSU completes first factor authentication (PSU identification and password) before PISP can access account or SCA method information",
+      "metadata": {
+        "flow_type": "embedded_sca",
+        "authentication_factor": "first_factor",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_094",
+      "content": "ASPSPs MUST support OAuth2 as a pre-step for PSU authentication in the Embedded SCA Approach",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP can process OAuth2 authentication before PSU authentication with first factor in Embedded SCA flows",
+      "metadata": {
+        "context": "OAuth2 pre-step authentication",
+        "flow_type": "Embedded SCA",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_095",
+      "content": "ASPSPs MUST validate eIDAS certificate request syntax for payment initiation requests",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP validates eIDAS certificate syntax during payment initiation request processing",
+      "metadata": {
+        "validation_type": "eIDAS certificate syntax",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_096",
+      "content": "ASPSPs MUST validate TPP role semantics for payment initiation requests",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP validates TPP role semantics as part of payment initiation request validation",
+      "metadata": {
+        "validation_type": "TPP role semantics",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_097",
+      "content": "ASPSPs MUST return HTTP status code 201 (Created) for successful Start Authorisation responses when credentials are valid",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP returns HTTP 201 status when Start Authorisation request contains valid credentials",
+      "metadata": {
+        "http_status": "201",
+        "response_type": "Start Authorisation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_098",
+      "content": "ASPSPs MUST return HTTP status code 200 (OK) for Payment Status responses",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP returns HTTP 200 status for successful Payment Status requests with transaction status values like ACCT, REJT",
+      "metadata": {
+        "http_status": "200",
+        "response_type": "Payment Status",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_099",
+      "content": "ASPSPs MUST support one-time password (OTP) authentication method in Embedded SCA Approach",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP can process OTP authentication data in Authorisation-Update Request when only one SCA method is available",
+      "metadata": {
+        "sca_method": "OTP",
+        "approach": "Embedded SCA",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_100",
+      "content": "ASPSPs MUST provide available SCA methods to PSU when multiple authentication methods are supported",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP returns list of available SCA methods in Start Authorisation Response when multiple methods are supported for the PSU",
+      "metadata": {
+        "sca_selection": "multiple methods",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_101",
+      "content": "ASPSPs MUST support selection of SCA authentication method by PSU when multiple methods are available",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP can process PSU's selection of SCA method in Authorisation-Update Request and respond with appropriate challenge data",
+      "metadata": {
+        "sca_selection": "method selection",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_102",
+      "content": "ASPSPs MUST return ASPSP-SCA-Approach header with value DECOUPLED when branching to Decoupled SCA Approach",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP returns ASPSP-SCA-Approach header with DECOUPLED value when switching from Embedded to Decoupled approach",
+      "metadata": {
+        "header": "ASPSP-SCA-Approach",
+        "value": "DECOUPLED",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_103",
+      "content": "ASPSPs MUST support multilevel SCA approach with explicit start of multiple authorisation mechanisms",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP can process multiple Start Authorisation Requests for multilevel SCA scenarios like 4-eyes principle authorization",
+      "metadata": {
+        "sca_type": "multilevel",
+        "example": "4-eyes principle",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_104",
+      "content": "ASPSPs MUST return transaction status ACTC for multilevel SCA when first authorization is completed",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP returns transaction status ACTC in Payment Status Response during multilevel SCA after first successful authorization",
+      "metadata": {
+        "transaction_status": "ACTC",
+        "sca_type": "multilevel",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_105",
+      "content": "ASPSPs MUST return transaction status PATC for multilevel SCA when payment is partially authorized",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "f5ea71603fb5",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify ASPSP returns transaction status PATC in Payment Status Response when payment requires additional authorization in multilevel SCA",
+      "metadata": {
+        "transaction_status": "PATC",
+        "sca_type": "multilevel",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_106",
+      "content": "The system SHALL support GET request to retrieve transaction status at endpoint /v1/{payment-service}/{payment-product}/{paymentId}/status",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify GET request to status endpoint returns valid response with correct HTTP method and URL structure",
+      "metadata": {
+        "endpoint": "/v1/{payment-service}/{payment-product}/{paymentId}/status",
+        "http_method": "GET",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_107",
+      "content": "The payment-service path parameter SHALL accept values 'payments', 'bulk-payments', and 'periodic-payments'",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify endpoint accepts all three specified payment-service values and rejects invalid values",
+      "metadata": {
+        "parameter_type": "path",
+        "valid_values": [
+          "payments",
+          "bulk-payments",
+          "periodic-payments"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_108",
+      "content": "The ASPSP SHALL validate that the payment-product matches the payment initiation addressed by paymentId",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify system rejects requests where payment-product does not match the original payment initiation product",
+      "metadata": {
+        "validation_type": "cross_reference",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_109",
+      "content": "The X-Request-ID header SHALL be mandatory and contain a UUID unique to the call as determined by the initiating party",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify X-Request-ID header is present, contains valid UUID format, and request fails if header is missing",
+      "metadata": {
+        "header_type": "mandatory",
+        "data_type": "UUID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_110",
+      "content": "The Authorization header SHALL be included only if OAuth2 based authentication was performed in a pre-step or OAuth2 based SCA was performed in current PIS transaction or preceding AIS service in same session",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify Authorization header presence correlates with OAuth2 authentication flows and is absent when OAuth2 was not used",
+      "metadata": {
+        "header_type": "conditional",
+        "condition": "OAuth2_authentication",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_111",
+      "content": "The system SHALL return HTTP response code 200 for successful transaction status requests",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify successful transaction status requests return exactly HTTP 200 status code",
+      "metadata": {
+        "response_code": 200,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_112",
+      "content": "The response SHALL include mandatory transactionStatus field in JSON format when Payment Initiation Request was JSON encoded",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify JSON responses contain transactionStatus field with valid Transaction Status value",
+      "metadata": {
+        "response_format": "JSON",
+        "field_requirement": "mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_113",
+      "content": "The fundsAvailable field SHALL be included when ASPSP supports funds check, funds check has been performed, and transactionStatus is ACTC, ACWC or ACCP",
+      "canonical_ob_capability": "Funds Confirmation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify fundsAvailable field appears only when all conditions are met: ASPSP supports funds check, check was performed, and status is ACTC/ACWC/ACCP",
+      "metadata": {
+        "field_type": "conditional",
+        "status_conditions": [
+          "ACTC",
+          "ACWC",
+          "ACCP"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_114",
+      "content": "For XML encoded Payment Initiation Requests, the ASPSP MAY return status as pain.002 structure or JSON structure",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify ASPSP can choose to return either pain.002 XML format or JSON format for XML-initiated payments",
+      "metadata": {
+        "response_options": [
+          "pain.002",
+          "JSON"
+        ],
+        "input_format": "XML",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_115",
+      "content": "When XML status format is chosen, the system SHALL follow XML schema definitions of the original pain.001 schema",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "a4a84452c1ef",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify XML status responses conform to pain.001 schema definitions and pass XML schema validation",
+      "metadata": {
+        "schema_reference": "pain.001",
+        "validation_type": "XML_schema",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_116",
+      "content": "The GET /v1/{payment-service}/{payment-product}/{paymentId} endpoint SHALL return the content of a payment object",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that a GET request to the payment endpoint returns the complete payment object content with HTTP 200 response",
+      "metadata": {
+        "endpoint": "GET /v1/{payment-service}/{payment-product}/{paymentId}",
+        "extraction_method": "rule-based",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_117",
+      "content": "The payment-service path parameter SHALL accept only the values 'payments', 'bulk-payments', and 'periodic-payments'",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that only the specified values are accepted for payment-service parameter and invalid values are rejected",
+      "metadata": {
+        "parameter_type": "path",
+        "valid_values": [
+          "payments",
+          "bulk-payments",
+          "periodic-payments"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_118",
+      "content": "The X-Request-ID header SHALL be mandatory and contain a UUID that is unique to the call",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that requests without X-Request-ID header are rejected and that the header contains a valid UUID format",
+      "metadata": {
+        "header_name": "X-Request-ID",
+        "format": "UUID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_119",
+      "content": "The Authorization header SHALL be included only if OAuth2 based authentication was performed in a pre-step or SCA was performed",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that Authorization header presence correlates with OAuth2 authentication or SCA completion",
+      "metadata": {
+        "header_name": "Authorization",
+        "condition": "OAuth2 or SCA based",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_120",
+      "content": "The HTTP response code SHALL equal 200 for successful payment retrieval requests",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that successful payment retrieval returns HTTP status code 200",
+      "metadata": {
+        "response_code": 200,
+        "operation": "payment_retrieval",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_121",
+      "content": "The payment cancellation DELETE request SHALL return HTTP 204 if the DELETE is sufficient for cancelling the payment",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment cancellation without additional authorization returns HTTP 204 with no response body",
+      "metadata": {
+        "endpoint": "DELETE /v1/{payment-service}/{payment-product}/{paymentId}",
+        "response_code": 204,
+        "condition": "sufficient_for_cancellation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_122",
+      "content": "The payment cancellation DELETE request SHALL return HTTP 202 if authorisation of the cancellation by the PSU is needed",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that payment cancellation requiring PSU authorization returns HTTP 202 with appropriate response body",
+      "metadata": {
+        "endpoint": "DELETE /v1/{payment-service}/{payment-product}/{paymentId}",
+        "response_code": 202,
+        "condition": "authorization_required",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_123",
+      "content": "The TPP-Redirect-URI header SHALL be mandatory for the Redirect SCA Approach when TPP-Redirect-Preferred equals true",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that TPP-Redirect-URI header is required when redirect SCA approach is preferred",
+      "metadata": {
+        "header_name": "TPP-Redirect-URI",
+        "condition": "TPP-Redirect-Preferred=true",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_124",
+      "content": "The ASPSP SHALL check if the payment-product matches the payment initiation addressed by paymentId",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that mismatched payment-product and paymentId combinations are rejected with appropriate error",
+      "metadata": {
+        "validation_type": "parameter_consistency",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_125",
+      "content": "The transactionStatus field SHALL be mandatory in payment cancellation response body when HTTP code 202 is returned",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "326a9719d7b5",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that HTTP 202 responses for payment cancellation include mandatory transactionStatus field",
+      "metadata": {
+        "field_name": "transactionStatus",
+        "response_code": 202,
+        "operation": "payment_cancellation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_126",
+      "content": "The ASPSP shall support Account Information Service consent with specified type of service to grant access to",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP accepts consent requests with specified AIS service types and processes them correctly",
+      "metadata": {
+        "source": "consent mechanism description",
+        "context": "Account Information Service consent establishment",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_127",
+      "content": "The ASPSP shall support Account Information Service consent with multiplicity specification for one-off or recurring access",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP accepts and properly handles both one-off and recurring consent requests with appropriate access controls",
+      "metadata": {
+        "source": "consent mechanism description",
+        "context": "Account Information Service access multiplicity",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_128",
+      "content": "The ASPSP shall support Account Information Service consent with duration specification in days or maximum offered by ASPSP for recurring access",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP accepts consent requests with valid duration parameters and enforces duration limits according to policy",
+      "metadata": {
+        "source": "consent mechanism description",
+        "context": "Account Information Service consent duration",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_129",
+      "content": "The ASPSP shall perform Strong Customer Authentication (SCA) as mandated by EBA-RTS for consent authorization",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP implements compliant SCA process for consent authorization according to EBA-RTS requirements",
+      "metadata": {
+        "source": "consent authorization process",
+        "context": "Strong Customer Authentication requirement",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_130",
+      "content": "The ASPSP shall create a consent resource with detailed access rights, validity status, and Consent-ID token upon successful authorization",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP generates consent resource containing access rights, validity information, and unique consent identifier after successful SCA",
+      "metadata": {
+        "source": "consent resource creation",
+        "context": "Post-authorization consent resource generation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_131",
+      "content": "The ASPSP shall provide retrievable consent object via GET method on consent resource link",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify TPP can retrieve consent object details using GET request on provided consent resource link",
+      "metadata": {
+        "source": "consent retrieval mechanism",
+        "context": "Consent object accessibility",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_132",
+      "content": "The ASPSP shall validate Read Account Data Request against PSU consent for type of account data to be accessed",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP checks account data access requests against established consent scope and denies unauthorized access attempts",
+      "metadata": {
+        "source": "Read Account Data phase",
+        "context": "Consent-based access control",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_133",
+      "content": "The ASPSP shall validate Read Account Data Request against PSU consent for addressed account identification where applicable",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP verifies account identification in data requests matches consented accounts before granting access",
+      "metadata": {
+        "source": "Read Account Data phase",
+        "context": "Account identification validation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_134",
+      "content": "The ASPSP shall deny access for one-off consent if AISP requests data more than once or validity has timed out",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP blocks subsequent access attempts for one-off consents and enforces timeout restrictions (e.g., 20 minutes)",
+      "metadata": {
+        "source": "one-off consent restrictions",
+        "context": "Access frequency and timing controls",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_135",
+      "content": "The ASPSP shall deny data access if requested service type does not comply with consented service",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP rejects data requests for service types not included in original consent scope",
+      "metadata": {
+        "source": "consent compliance validation",
+        "context": "Service type authorization",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_136",
+      "content": "The ASPSP shall deny data access if actual access does not match consented duration or frequency",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP enforces consent duration and frequency limits, blocking access attempts that exceed authorized parameters",
+      "metadata": {
+        "source": "consent compliance validation",
+        "context": "Duration and frequency enforcement",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_137",
+      "content": "The ASPSP shall check access frequency per account and per PSU for consents covering multiple accounts",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP tracks and enforces frequency limits individually for each account within multi-account consents",
+      "metadata": {
+        "source": "multi-account frequency control",
+        "context": "Per-account access tracking",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_138",
+      "content": "The ASPSP shall support Detailed Consent model where TPP submits detailed consent information with PSU identification, services and account numbers to ASPSP for authorization",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP accepts and processes detailed consent requests containing specific PSU details, service types, and account identifiers",
+      "metadata": {
+        "source": "Consent Models - Detailed Consent",
+        "context": "Detailed consent processing",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_139",
+      "content": "The ASPSP shall display consent details to PSU during SCA for Detailed Consent model",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP presents specific consent details to PSU during authentication process for detailed consent requests",
+      "metadata": {
+        "source": "Consent Models - Detailed Consent",
+        "context": "SCA consent presentation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_140",
+      "content": "The ASPSP shall support Global Consent model where TPP submits only PSU identification for global consent authorization",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP accepts global consent requests with PSU identification only and processes them appropriately",
+      "metadata": {
+        "source": "Consent Models - Global Consent",
+        "context": "Global consent processing",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_141",
+      "content": "The ASPSP shall display general account access information to PSU during SCA for Global Consent model",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP shows general access description rather than specific details during global consent authentication",
+      "metadata": {
+        "source": "Consent Models - Global Consent",
+        "context": "SCA general consent presentation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_142",
+      "content": "The ASPSP shall support Bank Offered Consent model where ASPSP handles Consent Management directly with PSU",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP can manage consent process directly with PSU when requested by TPP, allowing PSU to define consent scope",
+      "metadata": {
+        "source": "Consent Models - Bank Offered Consent",
+        "context": "ASPSP-managed consent",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_143",
+      "content": "The ASPSP shall make detailed consent information retrievable by TPP via GET consent object for Bank Offered Consent",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify TPP can retrieve final consent details after ASPSP completes Bank Offered Consent process with PSU",
+      "metadata": {
+        "source": "Consent Models - Bank Offered Consent",
+        "context": "Post-consent detail retrieval",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_144",
+      "content": "The ASPSP may deliver account owner name without extension to standard consent model",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify ASPSP can optionally provide account owner name information using existing consent without additional authorization",
+      "metadata": {
+        "source": "Account Owner Name Delivery",
+        "context": "Optional owner name provision",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_145",
+      "content": "The ASPSP may require explicit consent extension by PSU to deliver account owner name",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify ASPSP can optionally require additional PSU consent specifically for account owner name disclosure",
+      "metadata": {
+        "source": "Account Owner Name Delivery",
+        "context": "Optional explicit consent requirement",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_146",
+      "content": "The ASPSP shall offer consent extension for both Detailed and Global Consent models if offered for one model",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2035ed10aab6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP provides consistent consent extension options across both Detailed and Global consent models when account owner name extension is supported",
+      "metadata": {
+        "source": "Account Owner Name Delivery",
+        "context": "Consent model consistency requirement",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_147",
+      "content": "The system SHALL return account information including resourceId, IBAN, currency, product, cashAccountType, and name attributes for each account",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that GET /v1/accounts returns JSON response containing accounts array with all required attributes (resourceId, iban, currency, product, cashAccountType, name) populated for each account",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "api_endpoint": "/v1/accounts",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_148",
+      "content": "The system SHALL support multicurrency accounts by setting currency code to 'XXX' for aggregated multicurrency account views",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that multicurrency accounts return currency value 'XXX' and that sub-accounts with specific currencies (EUR, USD) are also returned with their respective currency codes",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "multicurrency_support",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_149",
+      "content": "The system SHALL provide _links object with balances and transactions href URLs for each accessible account based on consent permissions",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that each account object contains _links with balances and transactions href URLs that are accessible based on granted consent permissions",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "hypermedia_links",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_150",
+      "content": "The GET /v1/accounts/{account-id} endpoint SHALL read account details using the resourceId from account list as the account-id path parameter",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that account details can be retrieved using account-id path parameter and that the account-id value remains constant throughout consent lifecycle",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "api_endpoint": "/v1/accounts/{account-id}",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_151",
+      "content": "The system MAY include booking balance in account details when withBalance query parameter is true and PSU consent permits balance access",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that when withBalance=true is provided and consent allows balance access, account details response includes balance information; verify parameter may be ignored by ASPSP",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "conditional_balance_inclusion",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_152",
+      "content": "The system SHALL require X-Request-ID header as mandatory UUID for all account information requests",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that all account information API calls require X-Request-ID header with valid UUID format and return error when missing",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "request_identification",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_153",
+      "content": "The system SHALL require Consent-ID header as mandatory for account information requests",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that account information API calls require Consent-ID header and return error when missing or invalid",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "consent_validation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_154",
+      "content": "The system SHALL include PSU-IP-Address header when request was actively initiated by PSU",
+      "canonical_ob_capability": "Data Access",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that PSU-IP-Address header is included in requests when PSU actively initiated the request and is omitted for automated/background requests",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "psu_ip_tracking",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_155",
+      "content": "The GET /v1/accounts/{account-id}/balances endpoint SHALL return account balances with balanceAmount, balanceType, and reference date information",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that balance endpoint returns array of balance objects containing currency, amount, balanceType, and appropriate date fields (referenceDate or lastChangeDateTime)",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "api_endpoint": "/v1/accounts/{account-id}/balances",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_156",
+      "content": "The system SHALL support multiple balance types including closingBooked, expected, interimBooked, and interimAvailable",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that balance responses can include different balanceType values (closingBooked, expected, interimBooked, interimAvailable) with appropriate amounts and dates",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "balance_types",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_157",
+      "content": "The GET /v1/accounts/{account-id}/transactions endpoint SHALL support bookingStatus parameter with values 'booked', 'pending', 'both', and 'information'",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that transaction endpoint accepts bookingStatus parameter and filters results accordingly; verify 'booked' is mandatory while others are optional",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "api_endpoint": "/v1/accounts/{account-id}/transactions",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_158",
+      "content": "The system SHALL support dateFrom and dateTo query parameters for transaction filtering with dateFrom being conditional mandatory",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that transaction endpoint accepts dateFrom (mandatory when no delta access) and dateTo (optional, defaults to now) parameters and filters transactions by booking date for booked transactions",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "date_filtering",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_159",
+      "content": "The system MAY support delta access through entryReferenceFrom parameter or deltaList boolean flag",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that when supported, entryReferenceFrom allows retrieving transactions after specific reference and deltaList returns transactions since last access; verify date parameters may be ignored when delta is used",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "delta_access",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_160",
+      "content": "The system SHALL support Accept header for specifying preferred response formats including JSON, XML, and text/plain",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that transaction endpoint respects Accept header preferences and returns appropriate Content-Type (application/json, application/xml, text/plain) in response",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "content_negotiation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_161",
+      "content": "The system SHALL return HTTP 200 status code for successful account information requests",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "fcc6292f816f",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that successful account list, account details, balance, and transaction requests return HTTP 200 status code",
+      "metadata": {
+        "extraction_method": "direct_specification",
+        "feature": "http_status_codes",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_162",
+      "content": "Transaction responses MUST include transactionId field for each transaction",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that every transaction object in both booked and pending arrays contains a transactionId field with a non-empty value",
+      "metadata": {
+        "source": "JSON response structure",
+        "extraction_method": "structural_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_163",
+      "content": "Transaction amounts MUST include currency and amount fields",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that every transactionAmount object contains both currency and amount fields with valid values",
+      "metadata": {
+        "source": "JSON response structure",
+        "extraction_method": "structural_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_164",
+      "content": "Booked transactions MUST include bookingDate field",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that all transactions in the booked array contain a bookingDate field with valid date format",
+      "metadata": {
+        "source": "JSON response structure",
+        "extraction_method": "structural_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_165",
+      "content": "Transaction responses MUST support both booked and pending transaction categories",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the transactions object contains both booked and pending arrays in the response structure",
+      "metadata": {
+        "source": "JSON response structure",
+        "extraction_method": "structural_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_166",
+      "content": "Standing orders MUST include standingOrderDetails with startDate, endDate, executionRule, and frequency",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that standing order transactions contain additionalInformationStructured.standingOrderDetails object with startDate, endDate, executionRule, and frequency fields",
+      "metadata": {
+        "source": "Standing order example",
+        "extraction_method": "structural_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_167",
+      "content": "AIS responses MUST return HTTP 200 OK status for successful transaction requests",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that successful GET requests to transaction endpoints return HTTP status code 200",
+      "metadata": {
+        "source": "HTTP response example",
+        "extraction_method": "protocol_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_168",
+      "content": "AIS responses MUST include X-Request-ID header matching the request",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the X-Request-ID header in the response matches the X-Request-ID header sent in the request",
+      "metadata": {
+        "source": "HTTP headers example",
+        "extraction_method": "protocol_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_169",
+      "content": "Standing order information requests MUST use bookingStatus parameter with value 'information'",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f30dd2c91d5e",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that GET requests for standing orders include bookingStatus=information query parameter",
+      "metadata": {
+        "source": "Request URL example",
+        "extraction_method": "protocol_analysis",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_170",
+      "content": "The API MUST support a GET endpoint at /v1/accounts/{account-id}/transactions/{transactionId} to read transaction details for a specific transaction on a given account.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that a GET request to the specified endpoint returns transaction details for a valid account-id and transactionId combination.",
+      "metadata": {
+        "endpoint": "/v1/accounts/{account-id}/transactions/{transactionId}",
+        "method": "GET",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_171",
+      "content": "The account-id path parameter MUST be a string that denotes the addressed account where the transaction was performed.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the account-id parameter accepts string values and correctly identifies the target account for transaction retrieval.",
+      "metadata": {
+        "parameter_type": "path",
+        "parameter_name": "account-id",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_172",
+      "content": "The transactionId path parameter MUST be a string that corresponds to the transactionId attribute from a transaction list entry.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the transactionId parameter accepts string values that match transactionId attributes from transaction list responses.",
+      "metadata": {
+        "parameter_type": "path",
+        "parameter_name": "transactionId",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_173",
+      "content": "The X-Request-ID header MUST be included as a UUID that uniquely identifies the request as determined by the initiating party.",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that all requests include an X-Request-ID header with a valid UUID format that uniquely identifies each request.",
+      "metadata": {
+        "header_name": "X-Request-ID",
+        "header_type": "UUID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_174",
+      "content": "The PSU-IP-Address header SHOULD be included when the request was actively initiated by the PSU, containing the forwarded IP address between PSU and TPP.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify that PSU-IP-Address header is present in requests initiated by PSUs and contains the correct forwarded IP address.",
+      "metadata": {
+        "header_name": "PSU-IP-Address",
+        "condition": "PSU-initiated requests",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_175",
+      "content": "The Consent-ID header MUST be included to identify the corresponding consent granted by the PSU.",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that all account information requests include a valid Consent-ID header that corresponds to an active PSU consent.",
+      "metadata": {
+        "header_name": "Consent-ID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_176",
+      "content": "The Authorization header SHOULD be included when OAuth2 based authentication was performed in a pre-step or OAuth2 based SCA was performed in the related consent authorization.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify that Authorization header is present when OAuth2 authentication or SCA was used, and contains valid OAuth2 tokens.",
+      "metadata": {
+        "header_name": "Authorization",
+        "condition": "OAuth2 authentication",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_177",
+      "content": "The API MUST return HTTP status code 200 for successful transaction detail retrieval requests.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that successful transaction detail requests return HTTP 200 status code.",
+      "metadata": {
+        "http_status": "200",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_178",
+      "content": "The response MUST include a Content-Type header with value application/json.",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that transaction detail responses include Content-Type header set to application/json.",
+      "metadata": {
+        "response_header": "Content-Type",
+        "expected_value": "application/json",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_179",
+      "content": "The response MUST echo back the X-Request-ID header value from the request.",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the response X-Request-ID header matches the value sent in the request.",
+      "metadata": {
+        "response_header": "X-Request-ID",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_180",
+      "content": "The API MUST support a GET endpoint at /v1/card-accounts to read a list of card accounts with additional information including balance information.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that a GET request to /v1/card-accounts returns a list of card accounts with balance information for authorized users.",
+      "metadata": {
+        "endpoint": "/v1/card-accounts",
+        "method": "GET",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_181",
+      "content": "The API MUST support a GET endpoint at /v1/card-accounts/{account-id} to read details about a specific card account.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that a GET request to the specified endpoint returns detailed information for a valid card account-id.",
+      "metadata": {
+        "endpoint": "/v1/card-accounts/{account-id}",
+        "method": "GET",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_182",
+      "content": "Card account access MUST assume that PSU consent is already given and stored on the ASPSP system.",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that card account endpoints only function when valid PSU consent exists and is stored in the ASPSP system.",
+      "metadata": {
+        "account_type": "card-accounts",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_183",
+      "content": "The card account list response MUST include a cardAccounts array containing Card Account Details objects.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that card account list responses contain a cardAccounts array with properly structured Card Account Details objects.",
+      "metadata": {
+        "response_field": "cardAccounts",
+        "field_type": "Array of Card Account Details",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_184",
+      "content": "The card account details response MUST include a cardAccount object containing Card Account Details.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "f4b3933a3ed2",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that card account details responses contain a cardAccount object with complete Card Account Details structure.",
+      "metadata": {
+        "response_field": "cardAccount",
+        "field_type": "Card Account Details",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_185",
+      "content": "The GET /v1/card-accounts/{account-id}/balances endpoint SHALL return HTTP response code 200 on successful balance retrieval.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that a valid GET request to card account balances endpoint returns HTTP 200 status code",
+      "metadata": {
+        "endpoint": "/v1/card-accounts/{account-id}/balances",
+        "http_method": "GET",
+        "response_code": "200",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_186",
+      "content": "The account-id parameter SHALL be constant at least throughout the lifecycle of a given consent.",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that account-id remains unchanged for all API calls during a single consent lifecycle",
+      "metadata": {
+        "parameter": "account-id",
+        "scope": "consent_lifecycle",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_187",
+      "content": "The X-Request-ID header field SHALL be mandatory and contain a UUID that is unique to the call as determined by the initiating party.",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that X-Request-ID header is present in all requests and contains a valid UUID format",
+      "metadata": {
+        "header": "X-Request-ID",
+        "type": "UUID",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_188",
+      "content": "The Consent-ID header field SHALL be mandatory and contain identification of the corresponding consent as granted by the PSU.",
+      "canonical_ob_capability": "Consent Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that Consent-ID header is present in balance requests and matches an active consent",
+      "metadata": {
+        "header": "Consent-ID",
+        "condition": "Mandatory",
+        "purpose": "consent_identification",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_189",
+      "content": "The Authorization header field SHALL only be contained if an OAuth2 based authentication was performed in a pre-step or an OAuth2 based SCA was performed in the related consent authorisation.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that Authorization header is present only when OAuth2 authentication has been performed",
+      "metadata": {
+        "header": "Authorization",
+        "condition": "Conditional",
+        "dependency": "oauth2_authentication",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_190",
+      "content": "The balances response field SHALL be mandatory and contain an array of balance information regarding the card account.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that response contains balances array with at least one balance entry",
+      "metadata": {
+        "response_field": "balances",
+        "type": "Array of Balance",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_191",
+      "content": "The GET /v1/card-accounts/{account-id}/transactions endpoint SHALL support dateFrom query parameter to specify the starting date of the transaction list.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that dateFrom parameter filters transactions from the specified date inclusive",
+      "metadata": {
+        "endpoint": "/v1/card-accounts/{account-id}/transactions",
+        "parameter": "dateFrom",
+        "type": "ISODate",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_192",
+      "content": "The bookingStatus parameter SHALL be mandatory and support 'booked' status, with 'pending' and 'both' being optional for the ASPSP.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that bookingStatus parameter accepts 'booked' value and optionally 'pending' and 'both' values",
+      "metadata": {
+        "parameter": "bookingStatus",
+        "mandatory_values": [
+          "booked"
+        ],
+        "optional_values": [
+          "pending",
+          "both"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_193",
+      "content": "The ASPSP MAY support deltaList parameter to indicate that the AISP wants all transactions after the last report access for the PSU on the addressed account.",
+      "canonical_ob_capability": "Account Information",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify that deltaList parameter, when supported, returns only transactions since last access",
+      "metadata": {
+        "parameter": "deltaList",
+        "type": "Boolean",
+        "condition": "Optional",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_194",
+      "content": "The PSU-IP-Address header SHALL be contained if and only if the request was actively initiated by the PSU.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that PSU-IP-Address header is present only for PSU-initiated requests and absent for TPP-initiated requests",
+      "metadata": {
+        "header": "PSU-IP-Address",
+        "condition": "Conditional",
+        "trigger": "psu_initiated_request",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_195",
+      "content": "The POST /v1/{payment-service}/{payment-product}/{paymentId}/authorisations endpoint SHALL create an authorisation sub-resource and return HTTP response code 201.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that POST request to authorisations endpoint creates new authorisation resource and returns HTTP 201",
+      "metadata": {
+        "endpoint": "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations",
+        "http_method": "POST",
+        "response_code": "201",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_196",
+      "content": "The authorisationId field SHALL be mandatory in the response and contain a unique resource identification of the created authorisation sub-resource.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that response contains unique authorisationId field for newly created authorisation",
+      "metadata": {
+        "response_field": "authorisationId",
+        "type": "String",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_197",
+      "content": "The scaStatus field SHALL be mandatory in the authorisation response to indicate the current status of the SCA process.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that scaStatus field is present in authorisation responses with valid SCA status value",
+      "metadata": {
+        "response_field": "scaStatus",
+        "type": "SCA Status",
+        "condition": "Mandatory",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_198",
+      "content": "The TPP-Redirect-URI header SHALL be mandatory for the Redirect SCA Approach when TPP-Redirect-Preferred equals true.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that TPP-Redirect-URI is present when using redirect SCA approach with TPP-Redirect-Preferred set to true",
+      "metadata": {
+        "header": "TPP-Redirect-URI",
+        "condition": "Conditional",
+        "dependency": "redirect_sca_approach",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_199",
+      "content": "The _links field SHALL be mandatory and contain hyperlinks for the transaction flow including scaStatus link.",
+      "canonical_ob_capability": "General",
+      "capability_confidence": 1.0,
+      "original_section_id": "feec7d26c6c6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that _links field contains required hyperlinks including scaStatus for authorisation flow",
+      "metadata": {
+        "response_field": "_links",
+        "type": "Links",
+        "condition": "Mandatory",
+        "required_links": [
+          "scaStatus"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_200",
+      "content": "TPP SHALL create a one-time use XSRF token to be conveyed to the ASPSP in the state parameter when preparing an authorization request in Redirect SCA approach.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify TPP generates unique XSRF token for each authorization request and includes it in state parameter",
+      "metadata": {
+        "context": "Redirect SCA approach XSRF protection",
+        "related_section": "7.6.1",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_201",
+      "content": "TPP SHALL bind the XSRF token value to the current session in the user agent when preparing authorization request.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify XSRF token is properly bound to PSU browser session and can be validated upon callback",
+      "metadata": {
+        "context": "Session binding for XSRF protection",
+        "related_section": "7.6.1",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_202",
+      "content": "TPP MUST generate a nonce for the challenge parameter in addition to XSRF token when using integrated OAuth SCA Approach.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP generates unique nonce for challenge parameter in OAuth SCA flow and binds it to user agent session",
+      "metadata": {
+        "context": "OAuth SCA approach nonce generation",
+        "related_section": "7.6.1",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_203",
+      "content": "TPP MUST check whether the state parameter is linked to the current session when retrieving GET command from PSU browser.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP validates state parameter matches session-bound value before processing authorization callback",
+      "metadata": {
+        "context": "State parameter validation in callback",
+        "related_section": "7.6.3",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_204",
+      "content": "TPP MUST stop the transaction if the state parameter validation check fails.",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify TPP terminates transaction flow when state parameter does not match session-bound value",
+      "metadata": {
+        "context": "Security failure handling",
+        "related_section": "7.6.3",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_205",
+      "content": "ASPSP MUST include Digest header field if and only if the Signature element is contained in the request header.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify Digest header presence correlates exactly with Signature header presence in requests",
+      "metadata": {
+        "context": "Request signing requirements",
+        "related_section": "10.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_206",
+      "content": "TPP MAY provide electronic signature of the request on application level as mandated by ASPSP.",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "MAY",
+      "test_criteria": "Verify TPP can generate valid application-level signatures when required by ASPSP policy",
+      "metadata": {
+        "context": "Application-level signing",
+        "related_section": "10.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_207",
+      "content": "TPP SHALL provide certificate used for signing the request in base64 encoding when signature is included.",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify TPP-Signature-Certificate header contains valid base64 encoded certificate when Signature header is present",
+      "metadata": {
+        "context": "Signature certificate provision",
+        "related_section": "10.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_208",
+      "content": "ASPSP SHALL return HTTP response code 200 for successful confirmation of funds requests.",
+      "canonical_ob_capability": "Funds Confirmation",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP returns HTTP 200 status code for valid funds confirmation requests",
+      "metadata": {
+        "context": "Funds confirmation response",
+        "related_section": "10.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_209",
+      "content": "ASPSP MUST return fundsAvailable as true if sufficient funds are available at the time of the request, false otherwise.",
+      "canonical_ob_capability": "Funds Confirmation",
+      "capability_confidence": 1.0,
+      "original_section_id": "2bff2fd29855",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify fundsAvailable boolean accurately reflects account balance sufficiency for requested amount",
+      "metadata": {
+        "context": "Funds availability indication",
+        "related_section": "10.2",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_210",
+      "content": "When a TPP includes a digital signature, the TPP must include a Digest header containing a hash of the message body using SHA-256 or SHA-512 algorithms",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that HTTP requests with digital signatures include a Digest header with SHA-256 or SHA-512 hash of the request body",
+      "metadata": {
+        "hash_algorithms": [
+          "SHA-256",
+          "SHA-512"
+        ],
+        "rfc_reference": "RFC3230",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_211",
+      "content": "For messages without a body, the Digest header must contain the hash of an empty byte list",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that HTTP requests without message bodies include a Digest header containing the hash of an empty byte list",
+      "metadata": {
+        "special_case": "empty_body",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_212",
+      "content": "A Signature header must be present when including digital signatures",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that HTTP requests with digital signatures include a Signature header",
+      "metadata": {
+        "signhttp_reference": "chapter 4",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_213",
+      "content": "The keyId field in the Signature header must contain the serial number of the TPP's certificate formatted as keyId=\"SN=XXX,CA=YYYYYYYYYYYYYYYY\"",
+      "canonical_ob_capability": "Certificate Management",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the keyId field uses the specified format with certificate serial number and CA distinguished name",
+      "metadata": {
+        "format_pattern": "SN=XXX,CA=YYYYYYYYYYYYYYYY",
+        "encoding": "hexadecimal",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_214",
+      "content": "The algorithm parameter in the Signature header is mandatory and must identify the same signature algorithm as the TPP's public key in the certificate",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the algorithm parameter matches the signature algorithm in the TPP's certificate and uses SHA-256 or SHA-512 as hash algorithm",
+      "metadata": {
+        "hash_algorithms": [
+          "SHA-256",
+          "SHA-512"
+        ],
+        "certificate_matching": true,
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_215",
+      "content": "The headers parameter in the Signature header must include digest and x-request-id",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the headers parameter includes both digest and x-request-id in the signature calculation",
+      "metadata": {
+        "mandatory_headers": [
+          "digest",
+          "x-request-id"
+        ],
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_216",
+      "content": "The headers parameter must conditionally include psu-id if and only if PSU-ID header is present in the HTTP request",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that psu-id is included in headers parameter when PSU-ID header exists in the request, and excluded when it does not",
+      "metadata": {
+        "conditional_header": "psu-id",
+        "condition": "PSU-ID header present",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_217",
+      "content": "The headers parameter must conditionally include psu-corporate-id if and only if PSU-Corporate-ID header is present in the HTTP request",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that psu-corporate-id is included in headers parameter when PSU-Corporate-ID header exists in the request, and excluded when it does not",
+      "metadata": {
+        "conditional_header": "psu-corporate-id",
+        "condition": "PSU-Corporate-ID header present",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_218",
+      "content": "The headers parameter must conditionally include tpp-redirect-uri if and only if TPP-Redirect-URI header is present in the HTTP request",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that tpp-redirect-uri is included in headers parameter when TPP-Redirect-URI header exists in the request, and excluded when it does not",
+      "metadata": {
+        "conditional_header": "tpp-redirect-uri",
+        "condition": "TPP-Redirect-URI header present",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_219",
+      "content": "The signature parameter must be a base 64 encoded digital signature of the canonicalised signing string",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "ca341668f949",
+      "requirement_strength": "MUST",
+      "test_criteria": "Verify that the signature parameter contains a valid base 64 encoded signature of the canonicalised signing string formed from algorithm and headers parameters",
+      "metadata": {
+        "encoding": "base64",
+        "rfc_reference": "RFC4648",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_220",
+      "content": "TPP SHALL include the TPP-Signature-Certificate header containing the TPP's eIDAS certificate when making authenticated requests",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "4e52743eb3ae",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify that TPP-Signature-Certificate header is present in request and contains valid eIDAS certificate",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "HTTP signature example showing TPP authentication",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_221",
+      "content": "OAuth2 response type \"code\" and grant types \"authorization_code\" and \"refresh_token\" SHOULD be used",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "13",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify that OAuth2 implementation supports response type 'code' and grant types 'authorization_code' and 'refresh_token'",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "OAuth2 protocol requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_222",
+      "content": "TPPs and ASPSPs SHALL follow the security best practices defined in OAuth 2.0 Security Best Current Practice",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "13",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify implementation complies with OAuth 2.0 Security Best Current Practice guidelines",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "OAuth2 security requirements",
+        "reference": "[OA-SecTop]",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_223",
+      "content": "ASPSP SHALL provide TPPs with configuration data conforming to the OAuth 2.0 Authorisation Server Metadata specification",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "13",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify ASPSP provides OAuth 2.0 Authorization Server Metadata at well-known endpoint",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "ASPSP OAuth2 configuration requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_224",
+      "content": "client_id parameter SHALL contain organizationIdentifier as provided in the eIDAS certificate with specific structure format",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "13.1",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify client_id follows format: PSD + 2-char country code + hyphen + 2-8 char NCA identifier + hyphen + PSP identifier",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "OAuth2 authorization request parameters",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_225",
+      "content": "scope parameter SHALL reference the payment or consent resource in the format \"PIS:<paymentId>\", \"AIS:<consentId>\", or \"PIIS:<consentId>\"",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "13.1",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify scope parameter contains properly formatted resource reference with correct service prefix",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "OAuth2 scope parameter requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_226",
+      "content": "PKCE code_challenge parameter SHALL be included in authorization request according to RFC 7636 to prevent code injection attacks",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "13.1",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify PKCE code_challenge parameter is present and properly formatted according to RFC 7636",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "OAuth2 PKCE security requirements",
+        "reference": "RFC 7636",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_227",
+      "content": "code_challenge_method \"S256\" SHOULD be used for PKCE code challenge transformation",
+      "canonical_ob_capability": "Security",
+      "capability_confidence": 1.0,
+      "original_section_id": "13.1",
+      "requirement_strength": "SHOULD",
+      "test_criteria": "Verify code_challenge_method is set to 'S256' when specified",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "PKCE method recommendation",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_228",
+      "content": "TPP SHALL be authenticated during token request using OAuth 2.0 Mutual TLS Client Authentication and Certificate Bound Access Tokens in conjunction with the TPP's eIDAS certificate",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "13.3",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify TPP uses mutual TLS with eIDAS certificate for token request authentication",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "Token request authentication requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_229",
+      "content": "Access tokens SHALL be sent to the API using the Authorization header with Bearer authorization schema as defined in RFC 6750",
+      "canonical_ob_capability": "Authentication",
+      "capability_confidence": 1.0,
+      "original_section_id": "13.6",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify API requests include Authorization header with 'Bearer <token>' format",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "OAuth token usage in API requests",
+        "reference": "RFC 6750",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_230",
+      "content": "TPP message category SHALL only permit \"ERROR\" or \"WARNING\" values",
+      "canonical_ob_capability": "Error Handling",
+      "capability_confidence": 1.0,
+      "original_section_id": "14.2",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify TPP message category field only accepts 'ERROR' or 'WARNING' values",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "TPP Message Information data type constraints",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    },
+    {
+      "id": "ATOM_231",
+      "content": "Amount values SHALL be represented with fractional digits compliant to currency definition, up to 14 significant figures, with dot as decimal separator",
+      "canonical_ob_capability": "Payment Initiation",
+      "capability_confidence": 1.0,
+      "original_section_id": "14.3",
+      "requirement_strength": "SHALL",
+      "test_criteria": "Verify amount format has maximum 14 significant figures, uses dot decimal separator, and follows currency-specific fractional digit rules",
+      "metadata": {
+        "extraction_method": "direct",
+        "context": "Amount data type formatting requirements",
+        "source_ref": "data\\uploads\\c11d1a51-22fa-4934-a589-afb65d38f081\\Berlin Group.pdf"
+      }
+    }
+  ],
+  "dependencies": [],
+  "total_nodes": 231,
+  "total_edges": 0,
+  "root_requirements": [
+    "ATOM_001",
+    "ATOM_002",
+    "ATOM_003",
+    "ATOM_004",
+    "ATOM_005",
+    "ATOM_006",
+    "ATOM_007",
+    "ATOM_008",
+    "ATOM_009",
+    "ATOM_010",
+    "ATOM_011",
+    "ATOM_012",
+    "ATOM_013",
+    "ATOM_014",
+    "ATOM_015",
+    "ATOM_016",
+    "ATOM_017",
+    "ATOM_018",
+    "ATOM_019",
+    "ATOM_020",
+    "ATOM_021",
+    "ATOM_022",
+    "ATOM_023",
+    "ATOM_024",
+    "ATOM_025",
+    "ATOM_026",
+    "ATOM_027",
+    "ATOM_028",
+    "ATOM_029",
+    "ATOM_030",
+    "ATOM_031",
+    "ATOM_032",
+    "ATOM_033",
+    "ATOM_034",
+    "ATOM_035",
+    "ATOM_036",
+    "ATOM_037",
+    "ATOM_038",
+    "ATOM_039",
+    "ATOM_040",
+    "ATOM_041",
+    "ATOM_042",
+    "ATOM_043",
+    "ATOM_044",
+    "ATOM_045",
+    "ATOM_046",
+    "ATOM_047",
+    "ATOM_048",
+    "ATOM_049",
+    "ATOM_050",
+    "ATOM_051",
+    "ATOM_052",
+    "ATOM_053",
+    "ATOM_054",
+    "ATOM_055",
+    "ATOM_056",
+    "ATOM_057",
+    "ATOM_058",
+    "ATOM_059",
+    "ATOM_060",
+    "ATOM_061",
+    "ATOM_062",
+    "ATOM_063",
+    "ATOM_064",
+    "ATOM_065",
+    "ATOM_066",
+    "ATOM_067",
+    "ATOM_068",
+    "ATOM_069",
+    "ATOM_070",
+    "ATOM_071",
+    "ATOM_072",
+    "ATOM_073",
+    "ATOM_074",
+    "ATOM_075",
+    "ATOM_076",
+    "ATOM_077",
+    "ATOM_078",
+    "ATOM_079",
+    "ATOM_080",
+    "ATOM_081",
+    "ATOM_082",
+    "ATOM_083",
+    "ATOM_084",
+    "ATOM_085",
+    "ATOM_086",
+    "ATOM_087",
+    "ATOM_088",
+    "ATOM_089",
+    "ATOM_090",
+    "ATOM_091",
+    "ATOM_092",
+    "ATOM_093",
+    "ATOM_094",
+    "ATOM_095",
+    "ATOM_096",
+    "ATOM_097",
+    "ATOM_098",
+    "ATOM_099",
+    "ATOM_100",
+    "ATOM_101",
+    "ATOM_102",
+    "ATOM_103",
+    "ATOM_104",
+    "ATOM_105",
+    "ATOM_106",
+    "ATOM_107",
+    "ATOM_108",
+    "ATOM_109",
+    "ATOM_110",
+    "ATOM_111",
+    "ATOM_112",
+    "ATOM_113",
+    "ATOM_114",
+    "ATOM_115",
+    "ATOM_116",
+    "ATOM_117",
+    "ATOM_118",
+    "ATOM_119",
+    "ATOM_120",
+    "ATOM_121",
+    "ATOM_122",
+    "ATOM_123",
+    "ATOM_124",
+    "ATOM_125",
+    "ATOM_126",
+    "ATOM_127",
+    "ATOM_128",
+    "ATOM_129",
+    "ATOM_130",
+    "ATOM_131",
+    "ATOM_132",
+    "ATOM_133",
+    "ATOM_134",
+    "ATOM_135",
+    "ATOM_136",
+    "ATOM_137",
+    "ATOM_138",
+    "ATOM_139",
+    "ATOM_140",
+    "ATOM_141",
+    "ATOM_142",
+    "ATOM_143",
+    "ATOM_144",
+    "ATOM_145",
+    "ATOM_146",
+    "ATOM_147",
+    "ATOM_148",
+    "ATOM_149",
+    "ATOM_150",
+    "ATOM_151",
+    "ATOM_152",
+    "ATOM_153",
+    "ATOM_154",
+    "ATOM_155",
+    "ATOM_156",
+    "ATOM_157",
+    "ATOM_158",
+    "ATOM_159",
+    "ATOM_160",
+    "ATOM_161",
+    "ATOM_162",
+    "ATOM_163",
+    "ATOM_164",
+    "ATOM_165",
+    "ATOM_166",
+    "ATOM_167",
+    "ATOM_168",
+    "ATOM_169",
+    "ATOM_170",
+    "ATOM_171",
+    "ATOM_172",
+    "ATOM_173",
+    "ATOM_174",
+    "ATOM_175",
+    "ATOM_176",
+    "ATOM_177",
+    "ATOM_178",
+    "ATOM_179",
+    "ATOM_180",
+    "ATOM_181",
+    "ATOM_182",
+    "ATOM_183",
+    "ATOM_184",
+    "ATOM_185",
+    "ATOM_186",
+    "ATOM_187",
+    "ATOM_188",
+    "ATOM_189",
+    "ATOM_190",
+    "ATOM_191",
+    "ATOM_192",
+    "ATOM_193",
+    "ATOM_194",
+    "ATOM_195",
+    "ATOM_196",
+    "ATOM_197",
+    "ATOM_198",
+    "ATOM_199",
+    "ATOM_200",
+    "ATOM_201",
+    "ATOM_202",
+    "ATOM_203",
+    "ATOM_204",
+    "ATOM_205",
+    "ATOM_206",
+    "ATOM_207",
+    "ATOM_208",
+    "ATOM_209",
+    "ATOM_210",
+    "ATOM_211",
+    "ATOM_212",
+    "ATOM_213",
+    "ATOM_214",
+    "ATOM_215",
+    "ATOM_216",
+    "ATOM_217",
+    "ATOM_218",
+    "ATOM_219",
+    "ATOM_220",
+    "ATOM_221",
+    "ATOM_222",
+    "ATOM_223",
+    "ATOM_224",
+    "ATOM_225",
+    "ATOM_226",
+    "ATOM_227",
+    "ATOM_228",
+    "ATOM_229",
+    "ATOM_230",
+    "ATOM_231"
+  ],
+  "leaf_requirements": [
+    "ATOM_001",
+    "ATOM_002",
+    "ATOM_003",
+    "ATOM_004",
+    "ATOM_005",
+    "ATOM_006",
+    "ATOM_007",
+    "ATOM_008",
+    "ATOM_009",
+    "ATOM_010",
+    "ATOM_011",
+    "ATOM_012",
+    "ATOM_013",
+    "ATOM_014",
+    "ATOM_015",
+    "ATOM_016",
+    "ATOM_017",
+    "ATOM_018",
+    "ATOM_019",
+    "ATOM_020",
+    "ATOM_021",
+    "ATOM_022",
+    "ATOM_023",
+    "ATOM_024",
+    "ATOM_025",
+    "ATOM_026",
+    "ATOM_027",
+    "ATOM_028",
+    "ATOM_029",
+    "ATOM_030",
+    "ATOM_031",
+    "ATOM_032",
+    "ATOM_033",
+    "ATOM_034",
+    "ATOM_035",
+    "ATOM_036",
+    "ATOM_037",
+    "ATOM_038",
+    "ATOM_039",
+    "ATOM_040",
+    "ATOM_041",
+    "ATOM_042",
+    "ATOM_043",
+    "ATOM_044",
+    "ATOM_045",
+    "ATOM_046",
+    "ATOM_047",
+    "ATOM_048",
+    "ATOM_049",
+    "ATOM_050",
+    "ATOM_051",
+    "ATOM_052",
+    "ATOM_053",
+    "ATOM_054",
+    "ATOM_055",
+    "ATOM_056",
+    "ATOM_057",
+    "ATOM_058",
+    "ATOM_059",
+    "ATOM_060",
+    "ATOM_061",
+    "ATOM_062",
+    "ATOM_063",
+    "ATOM_064",
+    "ATOM_065",
+    "ATOM_066",
+    "ATOM_067",
+    "ATOM_068",
+    "ATOM_069",
+    "ATOM_070",
+    "ATOM_071",
+    "ATOM_072",
+    "ATOM_073",
+    "ATOM_074",
+    "ATOM_075",
+    "ATOM_076",
+    "ATOM_077",
+    "ATOM_078",
+    "ATOM_079",
+    "ATOM_080",
+    "ATOM_081",
+    "ATOM_082",
+    "ATOM_083",
+    "ATOM_084",
+    "ATOM_085",
+    "ATOM_086",
+    "ATOM_087",
+    "ATOM_088",
+    "ATOM_089",
+    "ATOM_090",
+    "ATOM_091",
+    "ATOM_092",
+    "ATOM_093",
+    "ATOM_094",
+    "ATOM_095",
+    "ATOM_096",
+    "ATOM_097",
+    "ATOM_098",
+    "ATOM_099",
+    "ATOM_100",
+    "ATOM_101",
+    "ATOM_102",
+    "ATOM_103",
+    "ATOM_104",
+    "ATOM_105",
+    "ATOM_106",
+    "ATOM_107",
+    "ATOM_108",
+    "ATOM_109",
+    "ATOM_110",
+    "ATOM_111",
+    "ATOM_112",
+    "ATOM_113",
+    "ATOM_114",
+    "ATOM_115",
+    "ATOM_116",
+    "ATOM_117",
+    "ATOM_118",
+    "ATOM_119",
+    "ATOM_120",
+    "ATOM_121",
+    "ATOM_122",
+    "ATOM_123",
+    "ATOM_124",
+    "ATOM_125",
+    "ATOM_126",
+    "ATOM_127",
+    "ATOM_128",
+    "ATOM_129",
+    "ATOM_130",
+    "ATOM_131",
+    "ATOM_132",
+    "ATOM_133",
+    "ATOM_134",
+    "ATOM_135",
+    "ATOM_136",
+    "ATOM_137",
+    "ATOM_138",
+    "ATOM_139",
+    "ATOM_140",
+    "ATOM_141",
+    "ATOM_142",
+    "ATOM_143",
+    "ATOM_144",
+    "ATOM_145",
+    "ATOM_146",
+    "ATOM_147",
+    "ATOM_148",
+    "ATOM_149",
+    "ATOM_150",
+    "ATOM_151",
+    "ATOM_152",
+    "ATOM_153",
+    "ATOM_154",
+    "ATOM_155",
+    "ATOM_156",
+    "ATOM_157",
+    "ATOM_158",
+    "ATOM_159",
+    "ATOM_160",
+    "ATOM_161",
+    "ATOM_162",
+    "ATOM_163",
+    "ATOM_164",
+    "ATOM_165",
+    "ATOM_166",
+    "ATOM_167",
+    "ATOM_168",
+    "ATOM_169",
+    "ATOM_170",
+    "ATOM_171",
+    "ATOM_172",
+    "ATOM_173",
+    "ATOM_174",
+    "ATOM_175",
+    "ATOM_176",
+    "ATOM_177",
+    "ATOM_178",
+    "ATOM_179",
+    "ATOM_180",
+    "ATOM_181",
+    "ATOM_182",
+    "ATOM_183",
+    "ATOM_184",
+    "ATOM_185",
+    "ATOM_186",
+    "ATOM_187",
+    "ATOM_188",
+    "ATOM_189",
+    "ATOM_190",
+    "ATOM_191",
+    "ATOM_192",
+    "ATOM_193",
+    "ATOM_194",
+    "ATOM_195",
+    "ATOM_196",
+    "ATOM_197",
+    "ATOM_198",
+    "ATOM_199",
+    "ATOM_200",
+    "ATOM_201",
+    "ATOM_202",
+    "ATOM_203",
+    "ATOM_204",
+    "ATOM_205",
+    "ATOM_206",
+    "ATOM_207",
+    "ATOM_208",
+    "ATOM_209",
+    "ATOM_210",
+    "ATOM_211",
+    "ATOM_212",
+    "ATOM_213",
+    "ATOM_214",
+    "ATOM_215",
+    "ATOM_216",
+    "ATOM_217",
+    "ATOM_218",
+    "ATOM_219",
+    "ATOM_220",
+    "ATOM_221",
+    "ATOM_222",
+    "ATOM_223",
+    "ATOM_224",
+    "ATOM_225",
+    "ATOM_226",
+    "ATOM_227",
+    "ATOM_228",
+    "ATOM_229",
+    "ATOM_230",
+    "ATOM_231"
+  ],
+  "is_dag": true,
+  "has_cycles": false,
+  "detected_cycles": [],
+  "topological_order": [
+    "ATOM_001",
+    "ATOM_002",
+    "ATOM_003",
+    "ATOM_004",
+    "ATOM_005",
+    "ATOM_006",
+    "ATOM_007",
+    "ATOM_008",
+    "ATOM_009",
+    "ATOM_010",
+    "ATOM_011",
+    "ATOM_012",
+    "ATOM_013",
+    "ATOM_014",
+    "ATOM_015",
+    "ATOM_016",
+    "ATOM_017",
+    "ATOM_018",
+    "ATOM_019",
+    "ATOM_020",
+    "ATOM_021",
+    "ATOM_022",
+    "ATOM_023",
+    "ATOM_024",
+    "ATOM_025",
+    "ATOM_026",
+    "ATOM_027",
+    "ATOM_028",
+    "ATOM_029",
+    "ATOM_030",
+    "ATOM_031",
+    "ATOM_032",
+    "ATOM_033",
+    "ATOM_034",
+    "ATOM_035",
+    "ATOM_036",
+    "ATOM_037",
+    "ATOM_038",
+    "ATOM_039",
+    "ATOM_040",
+    "ATOM_041",
+    "ATOM_042",
+    "ATOM_043",
+    "ATOM_044",
+    "ATOM_045",
+    "ATOM_046",
+    "ATOM_047",
+    "ATOM_048",
+    "ATOM_049",
+    "ATOM_050",
+    "ATOM_051",
+    "ATOM_052",
+    "ATOM_053",
+    "ATOM_054",
+    "ATOM_055",
+    "ATOM_056",
+    "ATOM_057",
+    "ATOM_058",
+    "ATOM_059",
+    "ATOM_060",
+    "ATOM_061",
+    "ATOM_062",
+    "ATOM_063",
+    "ATOM_064",
+    "ATOM_065",
+    "ATOM_066",
+    "ATOM_067",
+    "ATOM_068",
+    "ATOM_069",
+    "ATOM_070",
+    "ATOM_071",
+    "ATOM_072",
+    "ATOM_073",
+    "ATOM_074",
+    "ATOM_075",
+    "ATOM_076",
+    "ATOM_077",
+    "ATOM_078",
+    "ATOM_079",
+    "ATOM_080",
+    "ATOM_081",
+    "ATOM_082",
+    "ATOM_083",
+    "ATOM_084",
+    "ATOM_085",
+    "ATOM_086",
+    "ATOM_087",
+    "ATOM_088",
+    "ATOM_089",
+    "ATOM_090",
+    "ATOM_091",
+    "ATOM_092",
+    "ATOM_093",
+    "ATOM_094",
+    "ATOM_095",
+    "ATOM_096",
+    "ATOM_097",
+    "ATOM_098",
+    "ATOM_099",
+    "ATOM_100",
+    "ATOM_101",
+    "ATOM_102",
+    "ATOM_103",
+    "ATOM_104",
+    "ATOM_105",
+    "ATOM_106",
+    "ATOM_107",
+    "ATOM_108",
+    "ATOM_109",
+    "ATOM_110",
+    "ATOM_111",
+    "ATOM_112",
+    "ATOM_113",
+    "ATOM_114",
+    "ATOM_115",
+    "ATOM_116",
+    "ATOM_117",
+    "ATOM_118",
+    "ATOM_119",
+    "ATOM_120",
+    "ATOM_121",
+    "ATOM_122",
+    "ATOM_123",
+    "ATOM_124",
+    "ATOM_125",
+    "ATOM_126",
+    "ATOM_127",
+    "ATOM_128",
+    "ATOM_129",
+    "ATOM_130",
+    "ATOM_131",
+    "ATOM_132",
+    "ATOM_133",
+    "ATOM_134",
+    "ATOM_135",
+    "ATOM_136",
+    "ATOM_137",
+    "ATOM_138",
+    "ATOM_139",
+    "ATOM_140",
+    "ATOM_141",
+    "ATOM_142",
+    "ATOM_143",
+    "ATOM_144",
+    "ATOM_145",
+    "ATOM_146",
+    "ATOM_147",
+    "ATOM_148",
+    "ATOM_149",
+    "ATOM_150",
+    "ATOM_151",
+    "ATOM_152",
+    "ATOM_153",
+    "ATOM_154",
+    "ATOM_155",
+    "ATOM_156",
+    "ATOM_157",
+    "ATOM_158",
+    "ATOM_159",
+    "ATOM_160",
+    "ATOM_161",
+    "ATOM_162",
+    "ATOM_163",
+    "ATOM_164",
+    "ATOM_165",
+    "ATOM_166",
+    "ATOM_167",
+    "ATOM_168",
+    "ATOM_169",
+    "ATOM_170",
+    "ATOM_171",
+    "ATOM_172",
+    "ATOM_173",
+    "ATOM_174",
+    "ATOM_175",
+    "ATOM_176",
+    "ATOM_177",
+    "ATOM_178",
+    "ATOM_179",
+    "ATOM_180",
+    "ATOM_181",
+    "ATOM_182",
+    "ATOM_183",
+    "ATOM_184",
+    "ATOM_185",
+    "ATOM_186",
+    "ATOM_187",
+    "ATOM_188",
+    "ATOM_189",
+    "ATOM_190",
+    "ATOM_191",
+    "ATOM_192",
+    "ATOM_193",
+    "ATOM_194",
+    "ATOM_195",
+    "ATOM_196",
+    "ATOM_197",
+    "ATOM_198",
+    "ATOM_199",
+    "ATOM_200",
+    "ATOM_201",
+    "ATOM_202",
+    "ATOM_203",
+    "ATOM_204",
+    "ATOM_205",
+    "ATOM_206",
+    "ATOM_207",
+    "ATOM_208",
+    "ATOM_209",
+    "ATOM_210",
+    "ATOM_211",
+    "ATOM_212",
+    "ATOM_213",
+    "ATOM_214",
+    "ATOM_215",
+    "ATOM_216",
+    "ATOM_217",
+    "ATOM_218",
+    "ATOM_219",
+    "ATOM_220",
+    "ATOM_221",
+    "ATOM_222",
+    "ATOM_223",
+    "ATOM_224",
+    "ATOM_225",
+    "ATOM_226",
+    "ATOM_227",
+    "ATOM_228",
+    "ATOM_229",
+    "ATOM_230",
+    "ATOM_231"
+  ],
+  "max_depth": 0,
+  "metadata": {
+    "avg_in_degree": 0.0,
+    "avg_out_degree": 0.0
+  }
+}
